@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Real-time Mapping of Physical Scene Properties with an Autonomous Robot Experimenter</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/main.css">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+
+          <div class="text-center">
+            <h1 class="mt-4">Real-time Mapping of Physical Scene Properties with an Autonomous Robot Experimenter</h1>
+            <h2 class="mt-4">CORL 2022</h2>
+            <ul class="list-inline mt-4" style="font-size:20px">
+              <li class="list-inline-item">Iain Haughton</a></li>
+              <li class="list-inline-item"><a href="https://edgarsucar.github.io" target="_blank">Edgar Sucar</a></li>
+              <li class="list-inline-item">Andre Mouton</a></li>
+              <li class="list-inline-item"><a href="https://www.imperial.ac.uk/people/e.johns" target="_blank">Edward Johns</a></li>
+              <li class="list-inline-item"><a href="https://www.doc.ic.ac.uk/~ajd/" target="_blank">Andrew Davison</a></li>
+              <li class="mt-2">
+                <a href="https://www.dyson.com/en" target="_blank">Dyson Technology Ltd</a>,
+                <a href="https://www.imperial.ac.uk/dyson-robotics-lab/" target="_blank">Dyson Robotics Lab</a>,
+                <a href="https://www.robot-learning.uk/" target="_blank">Robot Learning Lab</a>
+              </li>
+            </ul>
+            <ul class="list-inline mt-4" style="font-size:20px">
+              <li class="list-inline-item">
+                <a href="https://arxiv.org/abs/2210.17325" target="_blank">Paper</a>
+              <!-- </li>
+                <a href=video_link target="_blank">Video</a></li> -->
+            </ul>
+          </div>
+
+          <div class="col-lg-10 offset-lg-1">
+
+            <div class="pl-4 pr-4" style="margin-top: 1.0em; margin-bottom: 1.0em">
+                <img src="assets/image/fabric.gif" class="img-fluid"  width="80%">
+            </div>
+
+            <p class="lead">
+              We demonstrate the first fully-autonomous, neural-scene labelling robot, trained from scratch, in real-time, 
+              and capable of operating in the real-world. 
+              The autonomous robot experimenter discovers and maps dense physical scene properties by providing the outcomes of 
+              sparse experiments -- a poke, spectroscopy measurement or lateral push -- to a 3D neural field. 
+            </p>
+              
+            <p class="lead">
+              Neural fields can be trained from scratch to represent the shape and appearance of 3D scenes efficiently. 
+              It has also been shown that they can densely map correlated properties such as semantics, via sparse interactions from a human labeller.         
+              In this work, we show that a robot can densely annotate a scene with arbitrary discrete or continuous physical properties via its 
+              own fully-autonomous experimental interactions, as it simultaneously scans and maps it with an RGB-D camera. 
+              A variety of scene interactions are possible, including poking with force sensing to determine rigidity, measuring local material 
+              type with single-pixel spectroscopy or predicting force distributions by pushing. 
+              Sparse experimental interactions are guided by entropy to enable high efficiency, with tabletop scene properties densely 
+              mapped from scratch in a few minutes from a few tens of interactions.
+            </p>
+          </div>
+
+          <!-- <div class="col-lg-10 offset-lg-1"><hr class="mt-4 mb-4"></div> -->
+          <div class="col-lg-10 offset-lg-1">   
+            <h4 id="video">Overview Video</h4>
+
+            <div align="center" class="row mt-4">
+              <div class="col-lg-12 offset-lg-0">
+                <video width="80%" height="auto" controls autoplay loop>
+                  <source src="assets/video/ROB-E_final.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- <div class="col-lg-10 offset-lg-1"><hr class="mt-4 mb-4"></div> -->
+          <div class="col-lg-10 offset-lg-1">
+            <h4>Method</h4>
+            <p>
+              We represent 3D scenes similarly to <a href="https://edgarsucar.github.io/iMAP/" target="_blank">iMap</a>, with an MLP that maps a 3D coordinate to colour
+              and volume density. The joint optimisation is extended to
+              include physical scene properties, which are optimised through rendering the outcomes of sparse experiments. 
+              The model is trained from scratch, in real-time and without any prior data.
+            </p>
+
+            <p>
+              The robot builds an internal representation of its environment via a series of autonomous experiments.
+              First, it actively selects interaction locations that are both feasible and information-rich. 
+              Second, the selected locations are mapped to the real-world coordinate
+              system of the robot, and a physical interaction with the scene is planned and executed. Third, the
+              resulting measurement is processed and/or classified to obtain the
+              ground-truth property label. Finally, using the labels
+              obtained in this manner, scene properties are optimised through semantic rendering of the robot-selected 
+              keyframe pixels. The resulting joint internal representation
+              of shape, appearance and semantics of the neural-field allows for the sparsely-annotated scene properties to
+              be propagated efficiently and densely throughout the scene.
+            </p>
+
+
+            <figure>
+              <img src="assets/image/actions.jpeg" width="75%">
+              <figcaption class="figure-caption text-center"> Sparse experiments, from left to right: top-down poke, spectroscopy measurement and lateral push. </figcaption>
+            </figure>
+
+            <figure>
+              <img src="assets/image/map.jpeg" width="75%">
+              <figcaption class="figure-caption text-center"> The corresponding rendered dense scene properties: rigidity, material class and push force distribution. </figcaption>
+            </figure>
+
+            <p>
+              The measurement of continuous-valued push force distribution demonstrates the temporal memory characteristics 
+              of neural field representations and the ability to predict dense, continuous-valued semantics with respect to sparse ground truths.
+              Below, the robot is shown interacting with a power drill with non-uniform mass distribution. This can clearly be seen in the final push
+              force distribution.
+            </p>
+            
+            <div class="pl-4 pr-4" style="margin-top: 1.0em; margin-bottom: 1.0em">
+              <img src="assets/image/push_zoom.gif" class="img-fluid"  width="80%">
+            </div>
+
+          </div>
+
+          <!-- <div class="col-lg-10 offset-lg-1"><hr class="mt-4 mb-4"></div> -->
+          <div class="col-lg-10 offset-lg-1 mb-5">
+            <h4>Contact</h4>
+            <p>
+              If you have any questions, please feel free to contact
+              <a href = "mailto: iain.haughton@gmail.com">Iain Haughton</a>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384&#45;JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery&#45;3.3.1.min.js" integrity="sha256&#45;FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
+  </body>
+</html>
