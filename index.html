@@ -9,7 +9,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    
+
+    <!DOCTYPE html>
+
+    <style>
+        /* h1 {
+            font-size: 20px;
+            text-align: left;
+        } */
+        p {
+            font-size: 16px;
+            text-align: left;
+            /* margin-top: 10px; */
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+        .author-name {
+            text-decoration: underline;
+        }
+        .pdf-button {
+            display: block;
+            width: 50px;
+            height: 30px;
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 5px;
+            margin: 10px auto;
+            text-decoration: none;
+            float: left;
+        }
+        .line {
+            border-top: 1px solid #000;
+            margin-top: 20px; /* Adjust margin as needed */
+        }
+        .year {
+            text-align: right;
+            font-size: 16px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
   </head>
 
   <body>
@@ -46,7 +87,7 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
               <tr>
               <td style="padding:20px;width:100%;vertical-align:middle">
-                <h2>Research</h2>
+                <h2>Research Highlights</h2>
                 <p>
                   I'm interested in computer vision, deep learning, generative AI, and image processing. Most of my research is about inferring the physical world (shape, motion, color, light, etc) from images, usually with radiance fields. Representative papers are <span class="highlight">highlighted</span>.
                 </p>
@@ -56,52 +97,48 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
 
+    <div class="line"></div>
+    <div class="year">2024</div>
 
     <tr onmouseout="smerf_stop()" onmouseover="smerf_start()">
-      <td style="padding:20px;width:25%;vertical-align:middle">
+      <td style="padding:10px;width:35%;vertical-align:middle">
         <div class="one">
-          <div class="two" id='smerf_image'><video  width=100% muted autoplay loop>
-          <source src="images/smerf.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-          </video></div>
-          <img src='images/smerf.jpg' width=100%>
+          <div class="two" id='smerf_image'>
+            <!-- <video  width=100% muted autoplay loop>
+              <source src="images/smerf.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video> -->
+            <img src='gifs/xiao_hdp.gif' width=150% id="smerfGif">
+          </div>
+          <!-- <img src='images/smerf.jpg' width=100%> -->
+          <!-- <img src='gifs/xiao_hdp.gif' width=150% id="smerfGif"> -->
         </div>
         <script type="text/javascript">
+
+            var gifImage = document.getElementById('smerfGif');
+            var originalSrc = gifImage.src;
+
           function smerf_start() {
-            document.getElementById('smerf_image').style.opacity = "1";
+            // document.getElementById('smerf_image').style.opacity = "1";
+            gifImage.src = originalSrc;
           }
 
           function smerf_stop() {
-            document.getElementById('smerf_image').style.opacity = "0";
+            gifImage.src = "";
+            // document.getElementById('smerf_image').style.opacity = "0";
           }
           smerf_stop()
         </script>
       </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://smerf-3d.github.io/">
-          <span class="papertitle">SMERF: Streamable Memory Efficient Radiance Fields for Real-Time Large-Scene Exploration</span>
-        </a>
-        <br>
-		<a href="http://www.stronglyconvex.com/about.html">Daniel Duckworth*</a>,
-		<a href="https://phogzone.com/">Peter Hedman*</a>,
-		<a href="https://creiser.github.io/">Christian Reiser</a>,
-		<a href="">Peter Zhizhin</a>,
-		<a href="">Jean-François Thibert</a>,
-        <a href="https://lucic.ai/">Mario Lučić</a>,
-        <a href="https://szeliski.org/">Richard Szeliski</a>,
-		<strong>Jonathan T. Barron</strong>
-        <br>
-        <em>arXiv</em>, 2023
-        <br>
-        <a href="https://smerf-3d.github.io/">project page</a>
-        /
-        <a href="https://www.youtube.com/watch?v=zhO8iUBpnCc">video</a>
-        /
-        <a href="https://arxiv.org/abs/2312.07541">arXiv</a>
-        <p></p>
+      
+      <td style="padding:10px;width:75%;vertical-align:middle">
+        <!-- <h3>Title of the Paper</h3> -->
+        <h3>Hierarchical Diffusion Policy for Kinematics-Aware Multi-Task Robotic Manipulation </h3>
         <p>
-        Distilling a Zip-NeRF into a tiled set of MERFs lets you fly through radiance fields on laptops and smartphones at 60 FPS.
+          Xiao Ma, Sumit Patidar, <span class="author-name">Iain Haughton</span> and Stephen James <br>
+          <em>Conference on Computer Vision and Pattern Recognition, 2024</em>
         </p>
+        <a text-align:left href="https://arxiv.org/pdf/2403.03890.pdf" class="pdf-button">PDF</a> 
       </td>
     </tr>
             
