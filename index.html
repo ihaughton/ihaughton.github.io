@@ -97,21 +97,25 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
 
-    <div class="line"></div>
-    <div class="year">2024</div>
+    <tr>
+        <td colspan="2">
+            <div class="line"></div>
+            <div class="year">2024</div>
+        </td>
+    </tr>
 
     <tr onmouseout="smerf_stop()" onmouseover="smerf_start()">
-      <td style="padding:10px;width:35%;vertical-align:middle">
+      <td style="padding:10px;width:40%;vertical-align:middle">
         <div class="one">
           <div class="two" id='smerf_image'>
             <!-- <video  width=100% muted autoplay loop>
               <source src="images/smerf.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video> -->
-            <img src='gifs/xiao_hdp.gif' width=150% id="smerfGif">
+            <img src='gifs/xiao_hdp.gif' width=180% id="smerfGif">
           </div>
           <!-- <img src='images/smerf.jpg' width=100%> -->
-          <!-- <img src='gifs/xiao_hdp.gif' width=150% id="smerfGif"> -->
+          <img src='gifs/xiao_hdp.jpg' width=180% id="smerfGif">
         </div>
         <script type="text/javascript">
 
@@ -119,13 +123,12 @@
             var originalSrc = gifImage.src;
 
           function smerf_start() {
-            // document.getElementById('smerf_image').style.opacity = "1";
-            gifImage.src = originalSrc;
+            document.getElementById('smerf_image').style.opacity = "1";
           }
 
           function smerf_stop() {
-            gifImage.src = "";
-            // document.getElementById('smerf_image').style.opacity = "0";
+            // gifImage.src = "";
+            document.getElementById('smerf_image').style.opacity = "0";
           }
           smerf_stop()
         </script>
@@ -142,7 +145,13 @@
       </td>
     </tr>
             
-            
+    <tr>
+        <td colspan="2">
+            <div class="line"></div>
+            <div class="year">2023</div>
+        </td>
+    </tr>
+
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
