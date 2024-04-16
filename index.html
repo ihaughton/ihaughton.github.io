@@ -1,170 +1,241 @@
 <!DOCTYPE HTML>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title>Iain Haughton</title>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <meta name="author" content="Iain Haughton">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <title>Iain Haughton</title>
 
-    <!DOCTYPE html>
+  <meta name="author" content="Iain Haughton">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
 
-    <style>
-        /* h1 {
+  <!DOCTYPE html>
+
+  <style>
+    /* h1 {
             font-size: 20px;
             text-align: left;
         } */
-        p {
-            font-size: 16px;
-            text-align: left;
-            /* margin-top: 10px; */
-            margin-top: 10px;
-            margin-bottom: 5px;
-        }
-        .author-name {
-            text-decoration: underline;
-        }
-        .pdf-button {
-            display: block;
-            width: 50px;
-            height: 30px;
-            background-color: #007bff;
-            color: #fff;
-            text-align: center;
-            line-height: 30px;
-            border-radius: 5px;
-            margin: 10px auto;
-            text-decoration: none;
-            float: left;
-        }
-        .line {
-            border-top: 1px solid #000;
-            margin-top: 20px; /* Adjust margin as needed */
-        }
-        .year {
-            text-align: right;
-            font-size: 16px;
-            margin-top: 5px;
-            margin-bottom: 5px;
-        }
-    </style>
-  </head>
+    p {
+      font-size: 16px;
+      text-align: left;
+      /* margin-top: 10px; */
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
 
-  <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    .author-name {
+      text-decoration: underline;
+    }
+
+    .pdf-button {
+      display: block;
+      width: 50px;
+      height: 30px;
+      background-color: #007bff;
+      color: #fff;
+      text-align: center;
+      line-height: 30px;
+      border-radius: 5px;
+      margin: 10px auto;
+      text-decoration: none;
+      float: left;
+    }
+
+    .line {
+      border-top: 1px solid #000;
+      margin-top: 20px;
+      /* Adjust margin as needed */
+    }
+
+    .year {
+      text-align: right;
+      font-size: 16px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    .video-responsive {
+      overflow: hidden;
+      padding-bottom: 56.25%;
+      /* 16:9 Aspect Ratio */
+      position: relative;
+      height: 0;
+    }
+
+    .video-responsive iframe {
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <table
+    style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
       <tr style="padding:0px">
         <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center;">
-                  Iain Haughton
-                </p>
-                <p>I'm a research scientist at <a href="https://ai.google/research">Google Research</a> in San Francisco, where I lead a small team that mostly works on <a href="https://www.matthewtancik.com/nerf">NeRF</a>.
-                </p>
-                <p>
-                  At Google I've worked on <a href="https://www.google.com/glass/start/">Glass</a>,  <a href="https://ai.googleblog.com/2014/04/lens-blur-in-new-google-camera-app.html">Lens Blur</a>, <a href="https://ai.googleblog.com/2014/10/hdr-low-light-and-high-dynamic-range.html">HDR+</a>, <a href="https://blog.google/products/google-ar-vr/introducing-next-generation-jump/">VR</a>, <a href="https://ai.googleblog.com/2017/10/portrait-mode-on-pixel-2-and-pixel-2-xl.html">Portrait Mode</a>, <a href="https://ai.googleblog.com/2020/12/portrait-light-enhancing-portrait.html">Portrait Light</a>, and <a href="https://blog.google/products/maps/three-maps-updates-io-2022/">Maps</a>. I did my PhD at <a href="http://www.eecs.berkeley.edu/">UC Berkeley</a>, where I was advised by <a href="http://www.cs.berkeley.edu/~malik/">Jitendra Malik</a>. I've received the <a href="https://www.thecvf.com/?page_id=413#YRA">PAMI Young Researcher Award</a>.
-                </p>
-                <p style="text-align:center">
-                  <a href="mailto:jonbarron@gmail.com">Email</a> &nbsp;/&nbsp;
-                  <a href="data/JonBarron-CV.pdf">CV</a> &nbsp;/&nbsp;
-                  <a href="data/JonBarron-bio.txt">Bio</a> &nbsp;/&nbsp;
-                  <a href="https://scholar.google.com/citations?hl=en&user=jktWnL8AAAAJ">Scholar</a> &nbsp;/&nbsp;
-				  <a href="https://www.threads.net/@jonbarron">Threads</a> &nbsp;/&nbsp;
-				  <a href="https://bsky.app/profile/jonbarron.bsky.social">Bluesky</a> &nbsp;/&nbsp;
-                  <a href="https://twitter.com/jon_barron">Twitter</a> &nbsp;/&nbsp;
-                  <a href="https://github.com/jonbarron/">Github</a>
-                </p>
-              </td>
-              <td style="padding:2.5%;width:40%;max-width:40%">
-                <a href="images/JonBarron.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/JonBarron.jpg" class="hoverZoomLink"></a>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr style="padding:0px">
+                <td style="padding:2.5%;width:63%;vertical-align:middle">
+                  <p class="name" style="text-align: center;">
+                    Iain Haughton
+                  </p>
+                  <p>I'm a research scientist at <a href="https://ai.google/research">Google Research</a> in San
+                    Francisco, where I lead a small team that mostly works on <a
+                      href="https://www.matthewtancik.com/nerf">NeRF</a>.
+                  </p>
+                  <p>
+                    At Google I've worked on <a href="https://www.google.com/glass/start/">Glass</a>, <a
+                      href="https://ai.googleblog.com/2014/04/lens-blur-in-new-google-camera-app.html">Lens Blur</a>, <a
+                      href="https://ai.googleblog.com/2014/10/hdr-low-light-and-high-dynamic-range.html">HDR+</a>, <a
+                      href="https://blog.google/products/google-ar-vr/introducing-next-generation-jump/">VR</a>, <a
+                      href="https://ai.googleblog.com/2017/10/portrait-mode-on-pixel-2-and-pixel-2-xl.html">Portrait
+                      Mode</a>, <a
+                      href="https://ai.googleblog.com/2020/12/portrait-light-enhancing-portrait.html">Portrait
+                      Light</a>, and <a href="https://blog.google/products/maps/three-maps-updates-io-2022/">Maps</a>. I
+                    did my PhD at <a href="http://www.eecs.berkeley.edu/">UC Berkeley</a>, where I was advised by <a
+                      href="http://www.cs.berkeley.edu/~malik/">Jitendra Malik</a>. I've received the <a
+                      href="https://www.thecvf.com/?page_id=413#YRA">PAMI Young Researcher Award</a>.
+                  </p>
+                  <p style="text-align:center">
+                    <a href="mailto:jonbarron@gmail.com">Email</a> &nbsp;/&nbsp;
+                    <a href="data/JonBarron-CV.pdf">CV</a> &nbsp;/&nbsp;
+                    <a href="data/JonBarron-bio.txt">Bio</a> &nbsp;/&nbsp;
+                    <a href="https://scholar.google.com/citations?hl=en&user=jktWnL8AAAAJ">Scholar</a> &nbsp;/&nbsp;
+                    <a href="https://www.threads.net/@jonbarron">Threads</a> &nbsp;/&nbsp;
+                    <a href="https://bsky.app/profile/jonbarron.bsky.social">Bluesky</a> &nbsp;/&nbsp;
+                    <a href="https://twitter.com/jon_barron">Twitter</a> &nbsp;/&nbsp;
+                    <a href="https://github.com/jonbarron/">Github</a>
+                  </p>
+                </td>
+                <td style="padding:2.5%;width:40%;max-width:40%">
+                  <a href="images/JonBarron.jpg"><img
+                      style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo"
+                      src="images/JonBarron.jpg" class="hoverZoomLink"></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
               <tr>
-              <td style="padding:20px;width:100%;vertical-align:middle">
-                <h2>Research Highlights</h2>
-                <p>
-                  I'm interested in computer vision, deep learning, generative AI, and image processing. Most of my research is about inferring the physical world (shape, motion, color, light, etc) from images, usually with radiance fields. Representative papers are <span class="highlight">highlighted</span>.
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <h2>Research Highlights</h2>
+                  <p>
+                    I'm interested in computer vision, deep learning, generative AI, and image processing. Most of my
+                    research is about inferring the physical world (shape, motion, color, light, etc) from images,
+                    usually with radiance fields. Representative papers are <span class="highlight">highlighted</span>.
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
 
 
-    <tr>
-        <td colspan="2">
-            <div class="line"></div>
-            <div class="year">2024</div>
-        </td>
-    </tr>
+              <tr>
+                <td colspan="2">
+                  <div class="line"></div>
+                  <div class="year">2024</div>
+                </td>
+              </tr>
 
-    <tr onmouseout="smerf_stop()" onmouseover="smerf_start()">
-      <td style="padding:10px;width:40%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='smerf_image'>
-            <!-- <video  width=100% muted autoplay loop>
-              <source src="images/smerf.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video> -->
-            <img src='gifs/xiao_hdp.gif' width=180% id="smerfGif">
-          </div>
-          <!-- <img src='images/smerf.jpg' width=100%> -->
-          <img src='gifs/xiao_hdp.jpg' width=180% id="smerfGif">
-        </div>
-        <script type="text/javascript">
+              <tr onmouseout="smerf_stop()" onmouseover="smerf_start()">
+                <td style="padding:10px;width:40%;vertical-align:middle">
+                  <div class="one">
+                    <div class="two" id='smerf_image'>
+                      <!-- <video  width=100% muted autoplay loop>
+                      <source src="images/smerf.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                      </video> -->
+                      <img src='gifs/xiao_hdp.gif' width=180% id="smerfGif">
+                    </div>
+                    <!-- <img src='images/smerf.jpg' width=100%> -->
+                    <img src='gifs/xiao_hdp.jpg' width=180% id="smerfGif">
+                  </div>
+                  <script type="text/javascript">
 
-            var gifImage = document.getElementById('smerfGif');
-            var originalSrc = gifImage.src;
+                    var gifImage = document.getElementById('smerfGif');
+                    var originalSrc = gifImage.src;
 
-          function smerf_start() {
-            document.getElementById('smerf_image').style.opacity = "1";
-          }
+                    function smerf_start() {
+                      document.getElementById('smerf_image').style.opacity = "1";
+                    }
 
-          function smerf_stop() {
-            // gifImage.src = "";
-            document.getElementById('smerf_image').style.opacity = "0";
-          }
-          smerf_stop()
-        </script>
-      </td>
-      
-      <td style="padding:10px;width:75%;vertical-align:middle">
-        <!-- <h3>Title of the Paper</h3> -->
-        <h3>Hierarchical Diffusion Policy for Kinematics-Aware Multi-Task Robotic Manipulation </h3>
-        <p>
-          Xiao Ma, Sumit Patidar, <span class="author-name">Iain Haughton</span> and Stephen James <br>
-          <em>Conference on Computer Vision and Pattern Recognition, 2024</em>
-        </p>
-        <a text-align:left href="https://arxiv.org/pdf/2403.03890.pdf" class="pdf-button">PDF</a> 
-      </td>
-    </tr>
-            
-    <tr>
-        <td colspan="2">
-            <div class="line"></div>
-            <div class="year">2023</div>
-        </td>
-    </tr>
+                    function smerf_stop() {
+                      // gifImage.src = "";
+                      document.getElementById('smerf_image').style.opacity = "0";
+                    }
+                    smerf_stop()
+                  </script>
+                </td>
 
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:0px">
-                <br>
-                <p style="text-align:center;font-size:small;">
-                  <a href="https://github.com/jonbarron/jonbarron_website">website template</a> 
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
+                <td style="padding:10px;width:75%;vertical-align:middle">
+                  <!-- <h3>Title of the Paper</h3> -->
+                  <h3>Hierarchical Diffusion Policy for Kinematics-Aware Multi-Task Robotic Manipulation </h3>
+                  <p>
+                    Xiao Ma, Sumit Patidar, <span class="author-name">Iain Haughton</span> and Stephen James <br>
+                    <em>Conference on Computer Vision and Pattern Recognition, 2024</em>
+                  </p>
+                  <a text-align:left href="https://arxiv.org/pdf/2403.03890.pdf" class="pdf-button">PDF</a>
+                </td>
+              </tr>
+
+              <tr>
+                <td colspan="2">
+                  <div class="line"></div>
+                  <div class="year">2023</div>
+                </td>
+              </tr>
+
+              <tr onmouseout="smerf_stop()" onmouseover="smerf_start()">
+                <td style="padding:10px;width:40%;vertical-align:middle">
+                  <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/HmvCl_nJc3E?controls=0&start=701" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div>
+                </td>
+
+                <td style="padding:10px;width:75%;vertical-align:middle">
+                  <!-- <h3>Title of the Paper</h3> -->
+                  <h3>Hierarchical Diffusion Policy for Kinematics-Aware Multi-Task Robotic Manipulation </h3>
+                  <p>
+                    Xiao Ma, Sumit Patidar, <span class="author-name">Iain Haughton</span> and Stephen James <br>
+                    <em>Conference on Computer Vision and Pattern Recognition, 2024</em>
+                  </p>
+                  <a text-align:left href="https://arxiv.org/pdf/2403.03890.pdf" class="pdf-button">PDF</a>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:0px">
+                  <br>
+                  <p style="text-align:center;font-size:small;">
+                    <a href="https://github.com/jonbarron/jonbarron_website">website template</a>
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </td>
       </tr>
-    </table>
-  </body>
+  </table>
+</body>
+
 </html>
